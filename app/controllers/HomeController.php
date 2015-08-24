@@ -20,4 +20,55 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
+	public function showAbout()
+	{
+		return View::make('about');
+	}
+
+	public function showResume()
+	{
+		return View::make('resume');
+	}
+
+	public function showPortfolio()
+	{
+		return View::make('portfolio');
+	}
+
+	public function showContact()
+	{
+		return View::make('contact');
+	}
+
+	public function sayHello($name)
+	{
+		$data = ['name' => $name];
+		if ($name == "Chris") {
+	        return Redirect::to('/');
+	    } else {
+	        return View::make('sayhello')->with('name', $name);
+	    }
+	}
+
+
+	public function showRollDice($guess)
+	{
+	    $randomRoll = mt_rand(1, 6);
+
+	    if ($guess == $randomRoll) {
+	    	$message = 'Good guess!';
+	    } else {
+	    	$message = 'Guess again!';
+	    }
+
+	    $data = array(
+	    	'randomRoll' => $randomRoll,
+	    	'guess' => $guess,
+	    	'message' => $message
+	    );
+
+	    return View::make('roll-dice')->with($data);
+	}
+
+
 }

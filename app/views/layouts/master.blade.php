@@ -34,38 +34,35 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Rachel Pierce</a>
+					<a class="navbar-brand" href="/">CIAO<span class="glyphicon glyphicon-flash"></span>RACHEL</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/resume">Resume</a></li>
+						<li><a href="/portfolio">Portfolio</a></li>
+						<li><a href="/posts">Blog</a></li>
+						<li><a href="/contact">Contact</a></li>
 					</ul>	
 				</div><!--/.nav-collapse -->
 			</div><!--/.container-fluid -->
 		</nav>
 
-
-    	{{-- <div class="header clearfix">
-    		<nav>
-    			<ul class="nav nav-pills pull-right">
-					<li role="presentation" class="active"><a href="#">Home</a></li>
-					<li role="presentation"><a href="#">About</a></li>
-					<li role="presentation"><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-			<h3 class="text-muted">Rachel's stuff</h3>
-		</div> --}}
-
-		<!--div class="jumbotron">
-			<h1>Jumbotron heading</h1>
-			<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-			<p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-		</div-->
-
 		<div class="row marketing">
 	        <div>
+	        	@if (Session::has('successMessage'))
+				    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+				@endif
+				@if (Session::has('errorMessage'))
+				    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+				@endif
+
+	        	@foreach($errors->all() as $error)
+	        		<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-alert"></span> {{{ $error }}}</div>
+	        	@endforeach
 	        	@yield('content')
+
+	        	{{-- Below is the format for my blog posts --}}
 				<!--h4>Subheading</h4>
 				<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p-->
 	        </div>
@@ -78,9 +75,9 @@
 	</div> <!-- /container -->
 
 
-
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	@yield('script')
 </body>
 </html>

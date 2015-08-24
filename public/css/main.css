@@ -1,35 +1,28 @@
 @font-face {
-  font-family: 'Arimo';
-    src: url('../fonts/arimo/Arimo-Regular.ttf') format('truetype');
+    font-family: 'JosefinSans';
+    src: url('../fonts/josefinsans/JosefinSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-  font-family: 'Arimo';
-    src: url('../fonts/arimo/Arimo-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-  font-family: 'Arimo';
-    src: url('../fonts/arimo/Arimo-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-family: 'Playfair';
+    src: url('../fonts/playfairdisplay/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-  font-family: 'Arimo';
-    src: url('../fonts/arimo/Arimo-Italic.ttf') format('truetype');
+  font-family: 'Average-Regular';
+    src: url('../fonts/average/Average-Regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: italic;
+    font-style: normal;
 
 }
 
 @font-face {
-  font-family: 'Pacifico';
-    src: url('../fonts/pacifico/Pacifico.ttf') format('truetype');
+  font-family: 'FjallaOne-Regular';
+    src: url('../fonts/fjallaone/FjallaOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -38,26 +31,55 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  font-family: 'Arimo', Helvetica, sans-serif;
+  font-family: 'Playfair', serif;
+  /*background: url(/img/background.jpg) top left no-repeat;
+  background-attachment:fixed;*/
 }
 
-h1, h5, .navbar-brand {
-  font-family: 'Pacifico', serif;
+h1 {
+  font-family: 'FjallaOne-Regular', serif;
+  font-weight: bold;
   font-size: 5rem;
 }
 
 h2 {
-  font-family: 'Arimo', Helvetica, sans-serif;
+  font-family: 'FjallaOne-Regular', serif;
   font-weight: bold;
   font-style: italic;
 }
 
-a.navbar-brand:link {
-  font-family: 'Pacifico', serif;
-  font-size: 2.5rem;
-  color: #660066;
+h3 {
+  font-family: 'FjallaOne-Regular', serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
+h4 {
+  font-family: 'FjallaOne-Regular', serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #999999;
+}
+
+h5 {
+  font-family: 'FjallaOne-Regular', serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+a:link, a:hover {
+    text-decoration: none;
+}
+
+.navbar > .container-fluid {
+  margin-top: 0px;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'JosefinSans', serif;
+  font-size: 2.3rem;
+  color: #CC3399;
+}
 
 .gradient {
     height: 100%;

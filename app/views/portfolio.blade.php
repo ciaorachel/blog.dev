@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+<title>Rachel's Portfolio</title>
+@stop
+
 @section('content')
 <h1>My Portfolio</h1>
 
