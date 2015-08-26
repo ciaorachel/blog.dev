@@ -2,6 +2,12 @@
 
 class PostsController extends \BaseController {
 
+	public function __construct()
+	{
+		parent::__construct();
+		$this->beforeFilter('auth', array('except' => array('index', 'show')));
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,8 +15,17 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::paginate(4);
+		$posts = Post::with('user')->orderBy('created_at')->paginate(4);
 		return View::make('posts.index')->with('posts', $posts);
+
+
+		/*$query = Post::with('user');
+		$query->where('title', 'like', '%approach%');
+		$query->orWhereHas('user', function($q) {
+			$q->where('first_name', 'Joe');
+		});
+		$posts = $query->orderBy('created_at')->paginate(4);
+		return View::make('posts.index')->with('posts', $posts);*/
 	}
 
 
@@ -123,6 +138,7 @@ class PostsController extends \BaseController {
 	    } else {
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
+			$post->user_id = Auth::id();
 			$post->save();
 
 			Log::info("Post successfully saved!", Input::all());

@@ -62,14 +62,16 @@
 	        	@endforeach
 	        	@yield('content')
 
-	        	{{-- Below is the format for my blog posts --}}
-				<!--h4>Subheading</h4>
-				<p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p-->
 	        </div>
     	</div>
 
     	<footer class="footer">
-			<p>&copy; Rachel Pierce, 2015</p>
+    		@if(Request::path() !== 'posts' || Auth::check())
+    			<p>&copy; Rachel Pierce, 2015</p>
+    		@else 
+				<p>&copy; Rachel Pierce, <a href="/login">2015</a></p>
+			@endif
+			
 		</footer>
 
 	</div> <!-- /container -->

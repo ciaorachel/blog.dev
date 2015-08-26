@@ -13,6 +13,13 @@
 }
 
 @font-face {
+    font-family: 'Playfair';
+    src: url('../fonts/playfairdisplay/PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
   font-family: 'Average-Regular';
     src: url('../fonts/average/Average-Regular.ttf') format('truetype');
     font-weight: normal;
@@ -79,6 +86,17 @@ a:link, a:hover {
   font-family: 'JosefinSans', serif;
   font-size: 2.3rem;
   color: #CC3399;
+}
+
+#userDashBoard {
+    width:100%;
+    background-color: #eeeeee;
+    border-radius: 6px;
+    color:inherit;
+    padding: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
 }
 
 .gradient {

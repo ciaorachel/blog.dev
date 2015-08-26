@@ -15,4 +15,12 @@ class BaseController extends Controller {
 		}
 	}
 
+	
+	public function __construct()
+	{
+		//require csrf token for all post, delete and put functions
+		$this->beforeFilter('csrf', array('on' => array('post', 'delete', 'put')));
+	}
+
+
 }

@@ -19,22 +19,25 @@
 			{{ Form::label('body', 'Body') }}
 			{{ Form::textarea('body', null, ['class' => 'form-control']) }}
 		</div>
-		<div class="btn-group">
-			{{ Form::button('<span class="glyphicon glyphicon-pencil"></span> Save Edits', array('class' => 'btn btn-success', 'type' => 'submit')) }}
-		</div>
-		
 
+		<div class="btn-group btn-group-justified">
+			<div class="btn">
+				{{ Form::button('<span class="glyphicon glyphicon-pencil"></span> Save Edits', array('class' => 'btn btn-success pull-left', 'type' => 'submit')) }}
+			</div>
 	{{ Form::close() }}
-		<div>
-		<button class="btn btn-danger pull-right" id="delete"><span class="glyphicon glyphicon-remove"></span> Delete</button>
-			{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE', 'id' =>'formDelete')) }}
-			{{ Form::close() }}
-		</div>
 
-		<div class="btn-group">
-			<a href="{{{ action('PostsController@index') }}}"  class="btn btn-info pull-right"><span class="glyphicon glyphicon-chevron-left"></span> Cancel, Go Back</a>
-		</div>
+			<div class="btn">
+				<a href="{{{ action('PostsController@index') }}}"  class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span> Cancel, Go Back</a>
+			</div>
 
+			<div class="btn">
+				<button class="btn btn-danger pull-right" id="delete">
+					<span class="glyphicon glyphicon-remove"></span> Delete</button>
+					{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE', 'id' =>'formDelete')) }}
+					{{ Form::close() }}
+			</div>
+
+		</div>
 		
 
 @stop
@@ -50,7 +53,7 @@
 
 				if (onConfirm) {
 					$('#formDelete').submit();
-				};
+				}
 			});
 
 		}) ();

@@ -71,4 +71,31 @@ class HomeController extends BaseController {
 	}
 
 
+	public function showLogin()
+	{
+		return View::make('login');
+	}
+
+	public function doLogin()
+	{
+		$email = Input::get('email');
+		$password = Input::get('password');
+		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
+		    return Redirect::intended('/posts');
+		} else {
+		    // 2. Log email that tried to authenticate
+		    Session::flash('errorMessage', 'Login failed. Please log in with your email and password.');
+	    	Log::info('Login failed', array(Input::get('email')));
+		    return Redirect::action('HomeController@showLogin');
+		}
+	}
+
+	public function doLogout()
+	{
+		Auth::logout();
+		Session::flash('successMessage', 'You have successfully logged out.');
+		return Redirect::to('posts');
+	}
+
+
 }
