@@ -12,3 +12,5 @@
 
 ##Troubleshooting
 - if a class name is not found and you see the file containing it, try running composer dump-autoload from your vm.
+
+- to run migration, enter php artisan migrate --seed
