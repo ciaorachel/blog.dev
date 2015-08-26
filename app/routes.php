@@ -25,7 +25,10 @@ Route::get('sayhello/{name?}', 'HomeController@sayHello');
 
 Route::get('rolldice/{guess}', 'HomeController@showRollDice');
 
-
-
 Route::resource('posts', 'PostsController');
 
+Route::get('login', 'HomeController@showLogin');
+
+Route::post('login', 'HomeController@doLogin');
+
+Route::get('logout', 'HomeController@doLogout');
