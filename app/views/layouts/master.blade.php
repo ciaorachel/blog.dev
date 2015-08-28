@@ -22,9 +22,11 @@
 </head>
 <body>
 
+	<!--div class="@if(Request::path() == '/') homeOverlay @endif"-->
+
 	<div class="container">
 
-		<!-- Static navbar -->
+		<!-- Navbar -->
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -34,20 +36,17 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/">CIAO<span class="glyphicon glyphicon-flash"></span>RACHEL</a>
+					<a class="navbar-brand" href="/">ciao<span class="glyphicon glyphicon-grain"></span>rachel</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/about">About</a></li>
-						<li><a href="/resume">Resume</a></li>
-						<li><a href="/portfolio">Portfolio</a></li>
-						<li><a href="/posts">Blog</a></li>
-						<li><a href="/contact">Contact</a></li>
+						<li><a href="{{{ action('HomeController@showAbout') }}}">About</a></li>
+						<li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
+						<li><a href="{{{ action('HomeController@showContact') }}}">Contact</a></li>
 					</ul>	
 				</div><!--/.nav-collapse -->
 			</div><!--/.container-fluid -->
 		</nav>
-
 		<div class="row marketing">
 	        <div>
 	        	@if (Session::has('successMessage'))
@@ -63,19 +62,17 @@
 	        	@yield('content')
 
 	        </div>
-    	</div>
+		</div>
 
     	<footer class="footer">
     		@if(Request::path() !== 'posts' || Auth::check())
-    			<p>&copy; Rachel Pierce, 2015</p>
+    			<p><small>&copy; Rachel Pierce, 2015</small></p>
     		@else 
-				<p>&copy; Rachel Pierce, <a href="/login">2015</a></p>
-			@endif
-			
+				<p><small>&copy; Rachel Pierce, <a href="/login">2015</a></small></p>
+			@endif		
 		</footer>
-
+	<!--/div-->
 	</div> <!-- /container -->
-
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->

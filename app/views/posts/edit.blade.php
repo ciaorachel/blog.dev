@@ -7,7 +7,7 @@
 @section('content')
 	
 	<h1>Edit Post</h1>
-
+	{{-- Form to edit the post --}}
 	{{ Form::model($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT')) }}
 
 		<div class="form-group @if($errors->has('title')) has-error @endif">

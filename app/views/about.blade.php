@@ -5,13 +5,30 @@
 @stop
 
 @section('content')
-<h1>About Rachel</h1>
+<h1>Ciao! My name's Rachel</h1>
+<img src="/img/headshot.jpg" class="img-circle img-responsive" id="headshot">
+<h3>I'm a Web developer and editor based in San Antonio, TX.</h3> 
+<p>My Web development and design skills include:</p>
+	<ul>
+		<li>HTML5 / CSS3</li>
+		<li>Twitter Bootstrap design framework</li>
+		<li>JavaScript / jQuery</li>
+		<li>Exposure to MySQL, PHP and Laravel framework</li>
+	</ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h3>A little about my communications background...</h3>
+<p>While I'm a newbie to front-end Web design and back-end development, I have about a decade of experience as a writer and an editor. My editorial expertise covers:</p>
+	<ul>
+		<li>News writing and editing</li>
+		<li>Content development for marketing and sales teams</li>
+		<li>Business insights writing and editing</li>
+		<li>Editing scholarly articles and producing online academic journals</li>
+		<li>Expert on Associated Press and Chicago Manual of Style</li>
+	</ul>
+
+<p>See my full resume on <a href="https://www.linkedin.com/in/rachelpierce" target="blank">LinkedIn <span class="glyphicon glyphicon-share"></span></a>.</p>
+
+<h3>Thanks for stopping by&mdash;I invite you to check out my <a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a>.</h3>
+
 
 @stop
