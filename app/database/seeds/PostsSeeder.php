@@ -8,13 +8,12 @@ class PostsSeeder extends Seeder
 	{
 		$faker = Faker::create();
 
-		//delete all existing posts
-		Post::truncate();
-
-		for ($i = 0; $i<20; $i++) {
+		for ($i = 0; $i<20; $i++) 
+		{
 			$post = new Post();
 			$post->title = $faker->catchphrase;
-			$post->body = $faker->bs;
+			$post->body = $faker->realText;
+			$post->user_id = User::all()->random(1)->id;
 			$post->save();
 		}
 	}

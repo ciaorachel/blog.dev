@@ -1,6 +1,7 @@
 <?php
 
-class DatabaseSeeder extends Seeder {
+class DatabaseSeeder extends Seeder 
+{
 
 	/**
 	 * Run the database seeds.
@@ -11,8 +12,12 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
+		//delete all existing posts
+		DB::table('posts')->delete();
+		DB::table('users')->delete();
+
 		$this->call('UsersTableSeeder');
-		
+
 		$this->call('PostsSeeder');
 	}
 
