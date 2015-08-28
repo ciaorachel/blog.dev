@@ -1,0 +1,117 @@
+/* Styles for Simple Simon project */
+
+@font-face {
+    font-family: prototype;
+    src: url(/fonts/prototype/prototype.ttf);
+}
+
+.square {
+	width: 234;
+	height: 234px;
+	border-collapse: collapse;
+	float: left;
+	margin: 4px;
+}
+
+#counter {
+	width: 160px;
+	height: 160px;
+	margin: 0 auto;
+	border: #191919 8px solid;
+	background-color: #b2b2b2;
+	border-radius: 100%;
+	z-index: 30;
+	position: relative;
+	top: -66%;
+	left: 33%;
+	font-size: 3rem;
+	font-family: 'prototype', sans-serif;
+	color: #004700;
+	outline: none;
+}
+
+#counter:hover {
+	color: #197519;
+	text-shadow: none;
+}
+
+
+#gameBoard {
+	width: 510px;
+	height: 510px;
+	margin: 0 auto;
+	margin-top: 3rem;
+	border: #cccccc 3px solid;
+	background-color: #191919;
+	padding: 10px;
+	border-radius: 100%;
+}
+
+#red {		
+	background-color: #CF0000;
+	border-radius: 100% 1% 1% 1%;
+}
+
+#blue {
+	background-color: #6666FF;
+	border-radius: 1% 100% 1% 1%;
+}
+
+#green {
+	background-color: #009933;
+	border-radius: 1% 1% 1% 100%;
+}
+
+#yellow {
+	background-color: #FFCC00;
+	border-radius: 1% 1% 100% 1%;
+}
+
+#red.active {		
+	background-image:
+    radial-gradient(
+    	#FFCCCC, #CF0000
+    );
+    border-radius: 100% 1% 1% 1%;
+}
+
+#blue.active {
+	background-image:
+    radial-gradient(
+    	#D6E0F2, #6666FF
+    );
+    border-radius: 1% 100% 1% 1%;
+}
+
+#green.active {
+	background-image:
+    radial-gradient(
+    	#CCEBCC, #009933
+    );
+	border-radius: 1% 1% 1% 100%;
+}
+
+#yellow.active {
+	background-image:
+    radial-gradient(
+    	#FFFFE0, #FFCC00
+    );
+	border-radius: 1% 1% 100% 1%;
+}
+
+#begin {
+	display: inline-block;
+	height: 35px;
+	width: 100px; 
+	margin: 10px;
+	padding: 5px;
+	background-color: #dedede;
+}
+
+
+
+#controlButtons {
+	margin-left: 460px;
+	width: 500px
+
+}
