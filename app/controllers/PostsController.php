@@ -15,17 +15,18 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$posts = Post::with('user')->orderBy('created_at')->paginate(4);
+
+		$query = Post::with('user');
+		$search = Input::get('search');
+
+		if ($search) {
+			$query->where('title', 'like', '%' . $search .'%');
+			$query->orWhere('body', 'like', '%' . $search .'%');
+		}
+
+		$posts = $query->orderBy('created_at')->paginate(4);
 		return View::make('posts.index')->with('posts', $posts);
 
-
-		/*$query = Post::with('user');
-		$query->where('title', 'like', '%approach%');
-		$query->orWhereHas('user', function($q) {
-			$q->where('first_name', 'Joe');
-		});
-		$posts = $query->orderBy('created_at')->paginate(4);
-		return View::make('posts.index')->with('posts', $posts);*/
 	}
 
 
@@ -65,6 +66,10 @@ class PostsController extends \BaseController {
 		if(!$post) {
 			Session::flash('errorMessage', "That particular post could not be found");
 			App::abort(404);
+		} else {
+			$body = $post->body;
+			$parsedown = new Parsedown();
+			$post->body = $parsedown->text($body);
 		}
 
 		return View::make('posts.show')->with('post', $post);

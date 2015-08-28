@@ -17,7 +17,7 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+		return View::make('home');
 	}
 
 	public function showAbout()
@@ -25,49 +25,19 @@ class HomeController extends BaseController {
 		return View::make('about');
 	}
 
-	public function showResume()
-	{
-		return View::make('resume');
-	}
-
 	public function showPortfolio()
 	{
 		return View::make('portfolio');
 	}
 
+	public function showSimon()
+	{
+		return View::make('portfolio.simon.simon');
+	}
+
 	public function showContact()
 	{
 		return View::make('contact');
-	}
-
-	public function sayHello($name)
-	{
-		$data = ['name' => $name];
-		if ($name == "Chris") {
-	        return Redirect::to('/');
-	    } else {
-	        return View::make('sayhello')->with('name', $name);
-	    }
-	}
-
-
-	public function showRollDice($guess)
-	{
-	    $randomRoll = mt_rand(1, 6);
-
-	    if ($guess == $randomRoll) {
-	    	$message = 'Good guess!';
-	    } else {
-	    	$message = 'Guess again!';
-	    }
-
-	    $data = array(
-	    	'randomRoll' => $randomRoll,
-	    	'guess' => $guess,
-	    	'message' => $message
-	    );
-
-	    return View::make('roll-dice')->with($data);
 	}
 
 
@@ -83,7 +53,6 @@ class HomeController extends BaseController {
 		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
 		    return Redirect::intended('/posts');
 		} else {
-		    // 2. Log email that tried to authenticate
 		    Session::flash('errorMessage', 'Login failed. Please log in with your email and password.');
 	    	Log::info('Login failed', array(Input::get('email')));
 		    return Redirect::action('HomeController@showLogin');
