@@ -20,7 +20,7 @@
 }
 
 @font-face {
-  font-family: 'Average-Regular';
+    font-family: 'Average-Regular';
     src: url('../fonts/average/Average-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -28,7 +28,7 @@
 }
 
 @font-face {
-  font-family: 'FjallaOne-Regular';
+    font-family: 'FjallaOne-Regular';
     src: url('../fonts/fjallaone/FjallaOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -36,45 +36,45 @@
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-family: 'Playfair', serif;
-  font-size: 1.7rem;
-  border-top: solid 0.2rem #cccccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Playfair', serif;
+    font-size: 1.7rem;
+    border-top: solid 0.2rem #cccccc;
 }
 
 h1 {
-  font-family: 'FjallaOne-Regular', serif;
-  font-weight: bold;
-  font-size: 5rem;
-  /*color: #382F2D;*/
-  color: #444444;
+    font-family: 'FjallaOne-Regular', serif;
+    font-weight: bold;
+    font-size: 5rem;
+    /*color: #382F2D;*/
+    color: #444444;
 }
 
 h2 {
-  font-family: 'FjallaOne-Regular', serif;
-  font-weight: bold;
-  font-style: italic;
+    font-family: 'FjallaOne-Regular', serif;
+    font-weight: bold;
+    font-style: italic;
 }
 
 h3 {
-  font-family: 'FjallaOne-Regular', serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #121212;
+    font-family: 'FjallaOne-Regular', serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #121212;
 }
 
 h4 {
-  font-family: 'FjallaOne-Regular', serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #999999;
+    font-family: 'FjallaOne-Regular', serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #999999;
 }
 
 h5 {
-  font-family: 'FjallaOne-Regular', serif;
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'FjallaOne-Regular', serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 a, a:hover {
@@ -82,7 +82,7 @@ a, a:hover {
 }
 
 .navbar > .container-fluid {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
 .navbar-default {
@@ -94,7 +94,7 @@ a, a:hover {
 }
 
 .navbar-toggle {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 
 /* Navbar brand styling and color */
@@ -103,18 +103,17 @@ a, a:hover {
 }
 
 .navbar-default .navbar-brand {
-  font-family: 'JosefinSans', serif;
-  font-size: 2.3rem;
-  color: #000000;
+    font-family: 'JosefinSans', serif;
+    font-size: 2.3rem;
+    color: #000000;
 }
 
 .navbar-brandLink {
-  color: #000000 !important;
+    color: #000000 !important;
 }
 
 .navbar-default .navbar-brand:hover {
-  /*color: #999999;*/
-  color: #D6D2C4;
+    color: #D6D2C4;
 }
 
 .navbar-default .navbar-brand > span {
@@ -122,19 +121,16 @@ a, a:hover {
 }
 
 /* Navbar link colors */
-
 .navbar-default .navbar-nav>li>a {
     color: #005F86;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-    /*color: #999999;*/
     color: #D6D2C4;
 }
 
 .activeLink {
-  /*color: #000000 !important;*/
-  color: #382F2D !important;
+    color: #382F2D !important;
 }
 
 
@@ -150,7 +146,6 @@ a, a:hover {
 
 .homeStyle > h1 {
     font-size: 6rem;
-    /*color: #194719;*/
     color: #43695B;
 }
 
@@ -168,7 +163,7 @@ a, a:hover {
 }
 
 .btn {
-   border-radius: 0px;
+    border-radius: 0px;
 }
 
 .btn-about {
@@ -179,18 +174,17 @@ a, a:hover {
     color: #ffffff;
     padding: .5rem 2rem;
     margin-top: 1rem;
-
 }
 
 .btn-about > span {
-  font-size: 1rem;
-  vertical-align: middle;
-  padding-bottom: 4px;
+    font-size: 1rem;
+    vertical-align: middle;
+    padding-bottom: 4px;
 }
 
 .btn-about:hover {
-  background-color: #994600;
-  color: #ffffff;
+    background-color: #994600;
+    color: #ffffff;
 }
 
 #userDashBoard {
@@ -210,99 +204,85 @@ a, a:hover {
 }
 
 /* Everything side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-right: 20px;
-  padding-left: 20px;
+.header, .marketing, .footer {
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 /* Custom page header */
 .header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
 }
 
 /* Custom page footer */
 .footer {
-  padding-top: 4rem;
-  padding-bottom: 12rem;
-  text-align: center;
-  color: #777;
-  border-top: 0.2rem solid #cccccc;
-  width: 100%;
-  background-color: #D6D2C4;
+    padding-top: 4rem;
+    padding-bottom: 12rem;
+    text-align: center;
+    color: #777;
+    border-top: 0.2rem solid #cccccc;
+    width: 100%;
+    background-color: #D6D2C4;
 }
-
-
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-}
-/*.container-narrow > hr {
-  margin: 30px 0;
-}*/
 
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+    margin: 40px 0;
 }
 .marketing p + h4 {
-  margin-top: 28px;
+    margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
+    .container {
+        max-width: 730px;
+    }
+    
+/* Remove the padding we set earlier */
+    .header, .marketing, .footer {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
 
-  #headshot {
-      float: right;
-      margin-left: 3rem;
-      margin-bottom: 2rem;
-  }
+/* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
 
-  .homeStyle {
-    margin-top: 10rem;
-    margin-bottom: 10rem;  
-  }
+    #headshot {
+        float: right;
+        margin-left: 3rem;
+        margin-bottom: 2rem;
+    }
 
-  .activeNav {
-    /*border-bottom: solid 1px #000000;*/
-    border-bottom: solid 1px #382F2D;
-  }
+    .homeStyle {
+        margin-top: 10rem;
+        margin-bottom: 10rem;  
+    }
 
-  .hoverNav {
-    /*color: #999999;*/
-    color: #D6D2C4;
-    /*border-bottom: solid 1px #999999;*/
-    border-bottom: solid 1px #D6D2C4;
-  }
+    .activeNav {
+        border-bottom: solid 1px #382F2D;
+    }
 
-  .linkNav {
-      border-bottom: solid 1px transparent;
-      padding-bottom: 1px;
-  }
+    .hoverNav {
+        color: #D6D2C4;
+        border-bottom: solid 1px #D6D2C4;
+    }
 
+    .linkNav {
+        border-bottom: solid 1px transparent;
+        padding-bottom: 1px;
+    }
 }
 
 
@@ -312,13 +292,12 @@ a, a:hover {
         margin: 0 auto;
     }
 
-  .homeStyle {
-    margin-top: 3rem;
-    margin-bottom: 15rem;  
-  }
+    .homeStyle {
+        margin-top: 3rem;
+        margin-bottom: 15rem;  
+    }
 
-  .navbar-default .navbar-nav>li:last-child {
-    border-bottom: solid 1px #dddddd;
-  }
-
+    .navbar-default .navbar-nav>li:last-child {
+        border-bottom: solid 1px #dddddd;
+    }
 }

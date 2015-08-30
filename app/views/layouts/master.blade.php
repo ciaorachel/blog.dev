@@ -84,16 +84,11 @@
     	$('.navbar-default .navbar-brand')
     		.each(function(){
 				if(url == home){
-					/*console.log(window.location.href);
-					console.log(window.location.origin );
-					console.log(window.location.href == window.location.origin + "/");
-*/
 					$(this).closest('a').addClass('navbar-brandLink');
 					$(this).on('click', false);
-				}		
+			}		
     	});
 		
-
 
 	    $('.navbar-default .navbar-nav>li a')
 		    .each(function(){
@@ -113,8 +108,6 @@
 				    })	
 			    }
 		});
-
-		
 
 	});
 	</script>
