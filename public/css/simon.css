@@ -1,8 +1,10 @@
 /* Styles for Simple Simon project */
 
 @font-face {
-    font-family: prototype;
-    src: url(/fonts/prototype/prototype.ttf);
+    font-family: 'Prototype';
+    src: url(/fonts/prototype/prototype.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .square {
@@ -24,8 +26,8 @@
 	position: relative;
 	top: -66%;
 	left: 33%;
-	font-size: 3rem;
-	font-family: 'prototype', sans-serif;
+	font-size: 3.5rem;
+	font-family: 'Prototype' !important;
 	color: #004700;
 	outline: none;
 }
