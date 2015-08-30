@@ -22,8 +22,6 @@
 </head>
 <body>
 
-	<!--div class="@if(Request::path() == '/') homeOverlay @endif"-->
-
 	<div class="container">
 
 		<!-- Navbar -->
@@ -36,13 +34,13 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/">ciao<span class="glyphicon glyphicon-grain"></span>rachel</a>
+					<a class="navbar-brand" href="{{{ action('HomeController@showWelcome') }}}">ciao<span class="glyphicon glyphicon-grain"></span>rachel</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="{{{ action('HomeController@showAbout') }}}">About</a></li>
-						<li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
-						<li><a href="{{{ action('HomeController@showContact') }}}">Contact</a></li>
+						<li><a class="linkNav" href="{{{ action('HomeController@showAbout') }}}">About</a></li>
+						<li><a class="linkNav" href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
+						<li><a class="linkNav" href="{{{ action('HomeController@showContact') }}}">Contact</a></li>
 					</ul>	
 				</div><!--/.nav-collapse -->
 			</div><!--/.container-fluid -->
@@ -63,7 +61,7 @@
 
 	        </div>
 		</div>
-
+		</div> 
     	<footer class="footer">
     		@if(Request::path() !== 'posts' || Auth::check())
     			<p><small>&copy; Rachel Pierce, 2015</small></p>
@@ -71,12 +69,54 @@
 				<p><small>&copy; Rachel Pierce, <a href="/login">2015</a></small></p>
 			@endif		
 		</footer>
-	<!--/div-->
-	</div> <!-- /container -->
+
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	@yield('script')
+
+	<script type="text/javascript">
+	$(function() {
+    	var url = window.location.href;
+    	var home = window.location.origin + "/";
+
+    	$('.navbar-default .navbar-brand')
+    		.each(function(){
+				if(url == home){
+					/*console.log(window.location.href);
+					console.log(window.location.origin );
+					console.log(window.location.href == window.location.origin + "/");
+*/
+					$(this).closest('a').addClass('navbar-brandLink');
+					$(this).on('click', false);
+				}		
+    	});
+		
+
+
+	    $('.navbar-default .navbar-nav>li a')
+		    .each(function(){
+		    	if(url == (this.href)){
+		    		$(this).closest('li').addClass('activeNav');
+		    		$(this).closest('a').addClass('activeLink');
+		    		$(this).closest('li').removeClass('regularNav');
+		    		$(this).on('click', false);
+			    } else {
+				    $(this).on('mouseover', function() {
+				        $(this).addClass('hoverNav');
+				        $(this).removeClass('linkNav');
+				    })
+				    $(this).on('mouseout', function() {
+				        $(this).removeClass('hoverNav');
+				        $(this).addClass('linkNav');
+				    })	
+			    }
+		});
+
+		
+
+	});
+	</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-<h1>Ciao! My name's Rachel</h1>
+<h1>My name's Rachel</h1>
 <img src="/img/headshot.jpg" class="img-circle img-responsive" id="headshot">
 <h3>I'm a Web developer and editor based in San Antonio, TX.</h3> 
 <p>My Web development and design skills include:</p>
@@ -13,7 +13,7 @@
 		<li>HTML5 / CSS3</li>
 		<li>Twitter Bootstrap design framework</li>
 		<li>JavaScript / jQuery</li>
-		<li>Exposure to MySQL, PHP and Laravel framework</li>
+		<li>Exposure to MySQL, PHP and Laravel development framework</li>
 	</ul>
 
 <h3>A little about my communications background...</h3>
