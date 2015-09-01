@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="/css/simon.css">
 
 @section('title')
-<title>Rachel Pierce</title>
+<title>Simple Simon</title>
 @stop
 
 @section('content')
