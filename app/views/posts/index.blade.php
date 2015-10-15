@@ -51,7 +51,7 @@
 				</div>
 				<div class="media-body">
 					<h4 class="media-heading">{{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i:s A') }}}</h4>
-					<h3 class="media-heading"><a href="/posts/{{{ $post->id }}}">{{{ $post->title }}}</a></h3>
+					<h3 class="media-heading"><a href="/posts/sample.png">{{{ $post->title }}}</a></h3>
 					<p class="media-heading"><strong>Posted by {{{ $post->user->first_name }}}</strong> | {{ Str::words($post->body, 20) }}
 					| <a href="/posts/{{{ $post->id }}}"><strong>Read more</strong></a></p>
 				</div>
