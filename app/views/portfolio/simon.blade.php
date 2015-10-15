@@ -9,18 +9,22 @@
 @section('content')
 	<div>
 		<h5><a href="{{{ action('HomeController@showPortfolio') }}}"><span class="glyphicon glyphicon-menu-left"> Back to Portfolio</a></h5>
-		<h1>Simple Simon</h1>
-		<h2>Built with HTML, CSS, JavaScript and jQuery</h2>
+		
 		<div id="container">
-		<div id="gameBoard">
-			<div class="square" id="red"></div>
-			<div class="square" id="blue"></div>
-			<div class="square" id="green"></div>
-			<div class="square" id="yellow"></div>
-            <button id="counter">Start</button>         
-		</div>
+            <h1>Project: Simple Simon</h1>
+            <h3>Built with HTML, CSS, JavaScript and jQuery</h3>
 
-	</div>
+            <h2 id="title">Let's All Play Simple Simon!</h2>
+    		<div id="gameBoard">
+    			<div class="square" id="red"></div>
+    			<div class="square" id="blue"></div>
+    			<div class="square" id="green"></div>
+    			<div class="square" id="yellow"></div>
+                <button id="counter">Start</button>         
+    		</div>
+        </div>
+        
+
 	</div>
 	
 

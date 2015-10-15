@@ -202,12 +202,13 @@ a, a:hover {
 #userDashBoard {
     width:100%;
     background-color: #eeeeee;
-    border-radius: 6px;
     color:inherit;
     padding: 2rem;
     margin-top: 1rem;
     margin-bottom: 5rem;
     text-align: center;
+    background-image: url('/img/congruent_pentagon.png');
+    background-repeat: repeat;
 }
 
 #searchBox {
@@ -244,8 +245,15 @@ a, a:hover {
     border-top: 0.2rem solid #cccccc;
     width: 100%;
     background-color: #D6D2C4;
+    position: relative;
+    margin-bottom: -2.7rem;
+    height: 100%;
 }
 
+.withinFooter {
+    position: absolute;
+    bottom: 0;
+}
 
 /* Supporting marketing content */
 .marketing {

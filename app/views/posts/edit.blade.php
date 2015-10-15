@@ -20,6 +20,11 @@
 			{{ Form::textarea('body', null, ['class' => 'form-control']) }}
 		</div>
 
+		<div class="form-group @if($errors->has('body')) has-error @endif">
+			{{ Form::label('image', 'Upload an image') }}
+			{{ Form::file('image') }}
+		</div>		
+
 		<div class="btn-group btn-group-justified">
 			<div class="btn">
 				{{ Form::button('<span class="glyphicon glyphicon-pencil"></span> Save Edits', array('class' => 'btn btn-success pull-left', 'type' => 'submit')) }}
@@ -27,35 +32,11 @@
 	{{ Form::close() }}
 
 			<div class="btn">
-				<a href="{{{ action('PostsController@index') }}}"  class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span> Cancel, Go Back</a>
+				<a href="{{{ action('PostsController@index') }}}"  class="btn btn-info pull-left"><span class="glyphicon glyphicon-chevron-left"></span> Cancel, Go Back</a>
 			</div>
 
-			<div class="btn">
-				<button class="btn btn-danger pull-right" id="delete">
-					<span class="glyphicon glyphicon-remove"></span> Delete</button>
-					{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE', 'id' =>'formDelete')) }}
-					{{ Form::close() }}
-			</div>
+			
 
 		</div>
-		
-
 @stop
 
-@section('script')
-	<script type="text/javascript">
-		(function (){
-
-			"use strict";
-
-			$('#delete').on('click', function(){
-				var onConfirm = confirm('Are you sure you want to delete this post?');
-
-				if (onConfirm) {
-					$('#formDelete').submit();
-				}
-			});
-
-		}) ();
-	</script>
-@stop

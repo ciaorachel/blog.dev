@@ -35,6 +35,11 @@ class HomeController extends BaseController {
 		return View::make('portfolio.simon');
 	}
 
+	public function showWaldo()
+	{
+		return View::make('portfolio.waldo');
+	}
+
 	public function showContact()
 	{
 		return View::make('contact');

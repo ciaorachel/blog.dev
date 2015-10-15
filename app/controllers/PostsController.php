@@ -48,8 +48,8 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-			$post = new Post;
-			return $this->validateAndSave($post);
+		$post = new Post;
+		return $this->validateAndSave($post);
 	}
 
 
@@ -86,12 +86,6 @@ class PostsController extends \BaseController {
 	public function edit($id)
 	{
 		$post = Post::find($id);
-
-		if(!$post) {
-			Session::flash('errorMessage', "That particular post could not be found");
-			App::abort(404);
-		}
-
 		return View::make('posts.edit')->with('post', $post);
 	}
 
@@ -115,19 +109,6 @@ class PostsController extends \BaseController {
 	}
 
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		$post = Post::find($id);
-		$post->delete();
-
-		return Redirect::action('PostsController@index');
-	}
 
 	protected function validateAndSave($post) 
 	{
@@ -141,8 +122,16 @@ class PostsController extends \BaseController {
 	        // validation failed, redirect to the post create page with validation errors and old inputs
 	        return Redirect::back()->withInput()->withErrors($validator);
 	    } else {
+
+	    	if(Input::has('image')) {
+	    		$post->image = Input::file('image');
+	    	} else {
+	    		$post->image = Input::get(asset('public/img/sample.png'));
+	    	}
+
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
+			/*$post->image = Input::file('image');*/
 			$post->user_id = Auth::id();
 			$post->save();
 
@@ -154,5 +143,24 @@ class PostsController extends \BaseController {
 		}
 	}
 
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroy($id)
+	{
+		$post = Post::find($id);
+
+		if(!$post) {
+            Session::flash('errorMessage', "That particular post could not be found");
+            App::abort(404);
+        }
+
+		$post->delete();
+
+		return Redirect::action('PostsController@index');
+	}
 
 }

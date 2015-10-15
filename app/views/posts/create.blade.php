@@ -16,14 +16,20 @@
 			{{ Form::textarea('body', null, ['class' => 'form-control']) }}
 		</div>
 
-		<div>
-			<a href="{{{ action('PostsController@index') }}}"  class="btn btn-info pull-right">Cancel</a>
+		<div class="form-group @if($errors->has('image')) has-error @endif">
+			{{ Form::label('image', 'Upload image') }}
+			{{ Form::file('image', null, ['class' => 'form-control']) }}
 		</div>
+
 		<div>
-			{{ Form::button('<span class="glyphicon glyphicon-thumbs-up"></span> Save', array('class' => 'btn btn-success', 'type' => 'submit')) }}
+			{{ Form::button('Save <span class="glyphicon glyphicon-thumbs-up"></span>', array('class' => 'btn btn-success', 'type' => 'submit')) }}
 		</div>
 
 	{{ Form::close() }}
+
+		<div>
+			<a href="{{{ action('PostsController@index') }}}" class="btn btn-info pull-right"><span class="glyphicon glyphicon-chevron-left"></span> Cancel, Go Back</a>
+		</div>
 @stop
 
 

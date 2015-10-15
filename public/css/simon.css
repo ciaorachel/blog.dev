@@ -15,6 +15,13 @@
 	margin: 4px;
 }
 
+#title {
+	font-family: 'Prototype' !important;
+	color: #F2A900;
+	font-size: 3.5rem;
+	padding-left: 2rem;
+}
+
 #counter {
 	width: 160px;
 	height: 160px;
@@ -29,7 +36,6 @@
 	font-size: 3.5rem;
 	font-family: 'Prototype' !important;
 	color: #004700;
-	outline: none;
 }
 
 #counter:hover {
@@ -41,8 +47,7 @@
 #gameBoard {
 	width: 510px;
 	height: 510px;
-	margin: 0 auto;
-	margin-top: 3rem;
+	margin-bottom: 3rem;
 	border: #cccccc 3px solid;
 	background-color: #191919;
 	padding: 10px;
@@ -110,10 +115,12 @@
 	background-color: #dedede;
 }
 
-
-
 #controlButtons {
 	margin-left: 460px;
 	width: 500px
 
+}
+
+.container {
+	margin: 0 auto;
 }

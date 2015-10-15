@@ -12,10 +12,13 @@
     @yield('title')
 
     <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+	<!-- Font Awesome icons! -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 	<!-- Custom styles for this template -->
     <link href="/css/main.css" rel="stylesheet">
@@ -63,17 +66,20 @@
 		</div>
 		</div> 
     	<footer class="footer">
-    		@if(Request::path() !== 'posts' || Auth::check())
-    			<p><small>&copy; Rachel Pierce, 2015</small></p>
-    		@else 
-				<p><small>&copy; Rachel Pierce, <a href="/login">2015</a></small></p>
-			@endif		
+    		
+	    		@if(Request::path() !== 'posts' || Auth::check())
+	    			<p><small>&copy; Rachel Pierce, 2015</small></p>
+	    		@else 
+					<p><small>&copy; Rachel Pierce, <a href="/login">2015</a></small></p>
+				@endif
+			<div class="withinFooter">
+			</div>		
 		</footer>
 
-
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	@yield('script')
 
 	<script type="text/javascript">

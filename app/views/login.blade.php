@@ -17,7 +17,7 @@
 			{{ Form::password('password', array('class' => 'form-control')) }}
 		</div>
 		<div>
-			{{ Form::button('Log In', array('class' => 'btn btn-success', 'type' => 'submit')) }}
+			{{ Form::button('Log In  <span class="glyphicon glyphicon-log-in"></span>', array('class' => 'btn btn-success', 'type' => 'submit')) }}
 		</div>
 
 	{{ Form::close() }}

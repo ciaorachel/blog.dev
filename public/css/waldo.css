@@ -1,0 +1,94 @@
+/* For Where's Waldo game */
+
+@font-face {
+    font-family: 'MixStriped';
+    src: url(/fonts/mixstriped/MixStriped.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BrushHandNew';
+    src: url('../fonts/brush_hand_new/BrushHandNew.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#gameInstructions {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+#gameInstructions > h2  {
+	font-family: 'MixStriped', sans-serif;
+	font-size: 5rem;
+	font-style: normal;
+	color: #8F0000;
+}
+
+#gameInstructions > p  {
+	font-family: 'BrushHandNew', sans-serif;
+	font-size: 3rem;
+	color: #121212;
+}
+
+#start {
+	font-family: 'BrushHandNew', sans-serif;
+	font-size: 3rem;
+	color: #ffffff;
+	margin-right: 3rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+
+#rightSide {
+	background-image: url("/img/waldo-beach.png");
+	background-repeat: no-repeat;
+	position: relative;
+	vertical-align: bottom;
+	height: 705px;
+	bottom: 0;
+	max-width: 100%;
+}
+
+#gameboard {
+	border: 1px solid red;
+	vertical-align: bottom;
+	bottom: 0;
+	position: absolute;
+	bottom: 0;
+}
+
+.square {
+	width: 75px;
+	height: 130px;
+	margin: 0;
+	float: left;
+	vertical-align: bottom;
+	border: 1px solid black;
+}
+
+
+.active {
+	background-image: url("/img/waldo-actionfigure.png");
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+#container {
+	margin: 0 auto;
+}
+
+/* Responsive for cell phones */
+@media (max-width: 376px) {
+	#gameboard {
+	}
+}
+@media (max-width: 321px) {
+
+}
+

@@ -14,7 +14,7 @@
   </a>
 
   {{-- <p>Where's Waldo?</p> --}}
-  <a href="#">
+  <a href="{{{ action('HomeController@showWaldo')  }}}">
       <img src="/img/waldo.png" alt="..." class="img-circle">
   </a>
   
@@ -28,15 +28,11 @@
     <img src="/img/blog.png" alt="..." class="img-circle">
   </a>
 
-  {{-- Something else here --}}
-  <a href="#">
-    <img alt="" class="img-circle">
+  {{-- <p>Wanna Play</p>--}}
+  <a href="http://wannaplay.site/">
+    <img src="/img/wanna-play.png" class="img-circle">
   </a>
 
-  {{-- Something else here --}}
-  <a href="#">
-    <img alt="" class="img-circle">
-  </a>
 </div>
 
 @stop

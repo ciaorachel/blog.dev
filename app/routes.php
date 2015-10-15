@@ -19,6 +19,8 @@ Route::get('portfolio', 'HomeController@showPortfolio');
 
 Route::get('simon', 'HomeController@showSimon');
 
+Route::get('waldo', 'HomeController@showWaldo');
+
 Route::get('contact', 'HomeController@showContact');
 
 Route::get('sayhello/{name?}', 'HomeController@sayHello');
