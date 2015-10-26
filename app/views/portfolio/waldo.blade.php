@@ -9,35 +9,33 @@
 @section('content')
 <h5><a href="{{{ action('HomeController@showPortfolio') }}}"><span class="glyphicon glyphicon-menu-left"> Back to Portfolio</a></h5>
 
-<div id="container">
 	<h1>Project: Where's Waldo?</h1>
 	<h3>Built with HTML, CSS, JavaScript and jQuery</h3>
 
-	<div id="gameInstructions">
-		<h2 style="color: ">FUN IN THE SUN</h2>
-		<p>Can you find Waldo ... in just 10 seconds?</p>
-		<button id="start" class="btn btn-success">Start</button>
-		<p>Your Score: 
-			<button id="counter" class="btn btn-default disabled"> </button>
-			 / Time Left: 
-			 {{-- Need to add time remaining here --}}
-		</p>
-	</div>
+	<div class="container">
+		<div class="row">
+			<div id="gameBackground">
+				<div class="container" id="instructions">
+					<h2 style="color: ">FUN IN THE SUN</h2>
+					<p>Can you find Waldo ... in just <button id="timer">10</button> seconds?</p>
+					<button id="start" class="btn">START</button>
+					<p>Your score: <button id="counter">0</button> points</p>
 
-	<div id="rightSide">
-		<div id="gameboard">
-			<div class="square" id="0"></div>
-			<div class="square" id="1"></div>
-			<div class="square" id="2"></div>
-			<div class="square" id="3"></div>
-			<div class="square" id="4"></div>
-			<div class="square" id="5"></div>
-			<div class="square" id="6"></div>
-			<div class="square" id="7"></div>
-			<div class="square" id="8"></div>
+				</div>
+				<div id="gameboard">
+					<div class="square" id="0"></div>
+					<div class="square" id="1"></div>
+					<div class="square" id="2"></div>
+					<div class="square" id="3"></div>
+					<div class="square" id="4"></div>
+					<div class="square" id="5"></div>
+					<div class="square" id="6"></div>
+					<div class="square" id="7"></div>
+					<div class="square" id="8"></div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 		
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -59,30 +57,23 @@
 			    timer -=1;
 			    if (timer > 0) {
 			    	this.disabled = true;
-			    	this.text(timer + " seconds");
+			    	$("#timer").text(timer);
 			    }
 
 			    if (timer == 0) {
+			    	$("#timer").text(timer);
 			        alert("Time's up! You got " + clicks.length + " points!");
 			        this.enabled = true;
-			        clearInterval(countdown);
+			        clearInterval(timer);
+			        $(".square").removeClass("active");
 			    }
 			}, 1000);
     	});
 
 	    // This is to animate the mole square
-
-	    if ( $(window).width() < 321) {     
-			var selectRandomSquare = Math.floor(Math.random()*12);
-		} elseif ( $(window).width() < 376) {
-			var selectRandomSquare = Math.floor(Math.random()*16);
-		}
-
-
-
     	function animateMole() {
     		var square = $(".square");
-    		/*var selectRandomSquare = Math.floor(Math.random()*9);*/
+    		var selectRandomSquare = Math.floor(Math.random()*9);
     		var randomSquare = square[selectRandomSquare];
     		var id = randomSquare.getAttribute("id");
     		fadeInSquare(id);
@@ -100,7 +91,7 @@
 	    	if (randomSquare == true) {
 	    		fadeOutSquare(clickedId);
 	    		clicks += 1;
-	    		$("#counter").text("Points: " + (clicks.length));
+	    		$("#counter").text(clicks.length);
 	    	}
 	    });
 
