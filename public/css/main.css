@@ -290,8 +290,8 @@ a, a:hover {
     }
 
     .homeStyle {
-        margin-top: 10rem;
-        margin-bottom: 10rem;  
+        margin-top: 5rem;
+        margin-bottom: 5rem;  
     }
 
     .activeNav {
@@ -333,7 +333,7 @@ a, a:hover {
 
     .homeStyle {
         margin-top: 3rem;
-        margin-bottom: 15rem;  
+        margin-bottom: 3rem;  
     }
 
     .navbar-default .navbar-nav>li:last-child {
@@ -353,8 +353,7 @@ a, a:hover {
     }
 }
 
-
-@media (min-width: 768px) {
+@media only screen and (min-width: 481px) {
 
     #bottom-footer {
        bottom:0; 
