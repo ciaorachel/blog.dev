@@ -73,11 +73,11 @@
 	background-image: url("/img/waldo-beach-sm.png");
 	background-repeat: no-repeat;
 	background-position: relative;
-	height: 731px;
+	height: 730px;
 	bottom: 0;
-	min-width: 700px;
-	max-width: 100%;
+	width: 100%;
 	padding-top: 10px;
+	margin-left: 15px;
 }
 
 #gameboard {

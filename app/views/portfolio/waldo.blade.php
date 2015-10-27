@@ -9,10 +9,10 @@
 @section('content')
 <h5><a href="{{{ action('HomeController@showPortfolio') }}}"><span class="glyphicon glyphicon-menu-left"> Back to Portfolio</a></h5>
 
+	<div class="container">
 	<h1>Project: Where's Waldo?</h1>
 	<h3>Built with HTML, CSS, JavaScript and jQuery</h3>
 
-	<div class="container">
 		<div class="row">
 			<div id="gameBackground">
 				<div class="container" id="instructions">
