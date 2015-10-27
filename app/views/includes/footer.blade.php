@@ -3,7 +3,7 @@
 @if(Request::path() !== 'posts' || Auth::check())
 
 	@if(Request::path() == '/' || Request::path() == 'contact')
-		<footer class="footer" style="bottom:0; position:absolute;">
+		<footer class="footer" id="bottom-footer">
 			<p><small>&copy; Rachel Pierce, 2015</small></p>
 		</footer>
 
