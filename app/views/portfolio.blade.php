@@ -17,20 +17,20 @@
   <a href="{{{ action('HomeController@showWaldo')  }}}">
       <img src="/img/waldo.png" alt="..." class="img-circle">
   </a>
-  
-  {{-- <p>Instrument Exchange</p> --}}
-  <a href="#">
-    <img src="/img/adlister.png" alt="..." class="img-circle">
+
+  {{-- <p>Wanna Play</p>--}}
+  <a href="http://wannaplay.site/" target="blank">
+    <img src="/img/wanna-play.png" class="img-circle">
   </a>
 
   {{-- <p>Blog</p> --}}
   <a href="{{{ action('PostsController@index') }}}">
     <img src="/img/blog.png" alt="..." class="img-circle">
   </a>
-
-  {{-- <p>Wanna Play</p>--}}
-  <a href="http://wannaplay.site/">
-    <img src="/img/wanna-play.png" class="img-circle">
+  
+  {{-- <p>Instrument Exchange</p> --}}
+  <a href="#">
+    <img src="/img/adlister.png" alt="..." class="img-circle">
   </a>
 
 </div>

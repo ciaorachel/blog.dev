@@ -28,26 +28,8 @@
 	<div class="container">
 
 		<!-- Navbar -->
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="{{{ action('HomeController@showWelcome') }}}">ciao<span class="glyphicon glyphicon-grain"></span>rachel</a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a class="linkNav" href="{{{ action('HomeController@showAbout') }}}">About</a></li>
-						<li><a class="linkNav" href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
-						<li><a class="linkNav" href="{{{ action('HomeController@showContact') }}}">Contact</a></li>
-					</ul>	
-				</div><!--/.nav-collapse -->
-			</div><!--/.container-fluid -->
-		</nav>
+		@include('includes.navbar')
+
 		<div class="row marketing">
 	        <div>
 	        	@if (Session::has('successMessage'))
@@ -65,16 +47,8 @@
 	        </div>
 		</div>
 		</div> 
-    	<footer class="footer">
-    		
-	    		@if(Request::path() !== 'posts' || Auth::check())
-	    			<p><small>&copy; Rachel Pierce, 2015</small></p>
-	    		@else 
-					<p><small>&copy; Rachel Pierce, <a href="/login">2015</a></small></p>
-				@endif
-			<div class="withinFooter">
-			</div>		
-		</footer>
+
+    	@include('includes.footer')
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     
