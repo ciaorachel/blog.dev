@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Portfolio site of front-end Web designer and editor Rachel Pierce">
+    <meta name="keywords" content="rachel pierce, san antonio, web designer, web developer, front end, html, css, javascript, content writing, content development, editor">
+    <meta name="author" content="Rachel Pierce">
     <link rel="icon" href="../../favicon.ico">
 
     @yield('title')
