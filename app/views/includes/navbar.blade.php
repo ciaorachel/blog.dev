@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="{{{ action('HomeController@showWelcome') }}}">ciao<span class="glyphicon glyphicon-grain"></span>rachel</a>
+			<a class="navbar-brand" href="{{{ action('HomeController@showWelcome') }}}">ciao<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>rachel</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
