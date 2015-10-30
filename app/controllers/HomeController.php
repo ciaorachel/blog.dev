@@ -40,6 +40,11 @@ class HomeController extends BaseController {
 		return View::make('portfolio.waldo');
 	}
 
+	public function showAdlister()
+	{
+		return View::make('portfolio.adlister');
+	}
+
 	public function showContact()
 	{
 		return View::make('contact');

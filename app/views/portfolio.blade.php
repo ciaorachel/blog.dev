@@ -29,7 +29,7 @@
   </a>
   
   {{-- <p>Instrument Exchange</p> --}}
-  <a href="#">
+  <a href="{{{ action('HomeController@showAdlister') }}}">
     <img src="/img/adlister.png" alt="..." class="img-circle">
   </a>
 
