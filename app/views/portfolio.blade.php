@@ -33,6 +33,11 @@
     <img src="/img/adlister.png" alt="..." class="img-circle">
   </a>
 
+  {{-- <p>Events Planner</p> --}}
+  <a href="{{{ action('HomeController@showEventsPlanner') }}}">
+    <img src="/img/eventsplanner.png" alt="..." class="img-circle">
+  </a>
+
 </div>
 
 @stop

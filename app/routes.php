@@ -23,6 +23,8 @@ Route::get('waldo', 'HomeController@showWaldo');
 
 Route::get('adlister', 'HomeController@showAdlister');
 
+Route::get('eventsplanner', 'HomeController@showEventsPlanner');
+
 Route::get('contact', 'HomeController@showContact');
 
 Route::get('sayhello/{name?}', 'HomeController@sayHello');

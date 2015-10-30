@@ -45,6 +45,11 @@ class HomeController extends BaseController {
 		return View::make('portfolio.adlister');
 	}
 
+	public function showEventsPlanner()
+	{
+		return View::make('portfolio.eventsplanner');
+	}
+
 	public function showContact()
 	{
 		return View::make('contact');
