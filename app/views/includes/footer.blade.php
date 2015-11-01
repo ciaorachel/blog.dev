@@ -8,12 +8,12 @@
 		</footer>
 
 	@else
-		<footer class="footer">
+		<footer class="footer" id="footer-adjustment">
 			<p><small>&copy; Rachel Pierce, 2015</small></p>
 		</footer>
 	@endif
 @else 
-	<footer class="footer">
+	<footer class="footer" id="footer-adjustment">
 		<p><small>&copy; Rachel Pierce, <a href="/login">2015</a></small></p>
 	</footer>
 @endif

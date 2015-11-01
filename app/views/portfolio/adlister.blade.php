@@ -6,11 +6,11 @@
 
 @section('content')
 	<div>
-		<h5><a href="{{{ action('HomeController@showPortfolio') }}}"><span class="glyphicon glyphicon-menu-left"> Back to Portfolio</a></h5>
+		<h5><a href="{{{ action('HomeController@showPortfolio') }}}"><i class="fa fa-long-arrow-left"></i> Back to Portfolio</a></h5>
 		
 		<div id="container">
             <h1>Project: Adlister</h1>
-            <h3>Built with HTML, CSS, JavaScript and PHP</h3>
+            <h3>Built with HTML, CSS, JavaScript, jQuery and PHP</h3>
 
             <div class="screenshot">
             	<a href="">

@@ -23,7 +23,7 @@
 		</div>
 	@endif
 
-	<h5><a href="{{{ action('HomeController@showPortfolio') }}}"><span class="glyphicon glyphicon-menu-left"> Back to Portfolio</a></h5>
+	<h5><a href="{{{ action('HomeController@showPortfolio') }}}"><i class="fa fa-long-arrow-left"></i> Back to Portfolio</a></h5>
 	<h1>My Personal Blog</h1>
 	{{-- This is the search field --}}
 
