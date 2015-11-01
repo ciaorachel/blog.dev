@@ -1,4 +1,4 @@
-
+/* Fonts */
 @font-face {
     font-family: 'JosefinSans';
     src: url('../fonts/josefinsans/JosefinSans-Regular.ttf') format('truetype');
@@ -189,23 +189,76 @@ a, a:hover {
     color: #ffffff;
 }
 
-.portfolioImages > a > img {
-    padding: 5px;
-    border: solid 1px #cccccc;
+.shade-overlay {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-.portfolioImages > a > img:hover {
+.shade-overlay > img {
+    padding: 5px;
+    border: solid 1px #cccccc;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.shade-overlay:hover:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,.6);
     border: solid 1px #005F86;
 }
 
-
-/* Portfolio - for projects with static pages/screenshots */
-.screenshot {
-    margin-bottom: 2rem;
+.imgDescription {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 1000;
+    text-align: center;
+    margin-top: 3rem;
+    color: #fff;
 }
 
+.shade-overlay:hover .imgDescription {
+    visibility: visible;
+    opacity: 1;
+}
+
+.imgTitle {
+    font-size: 24px;
+    font-style: normal;
+    font-family: 'FjallaOne-Regular', serif;
+}
+
+.imgCaption {
+    font-size: 14px;
+    font-style: italic;
+}
+
+
+
+/* Portfolio - for projects with static pages/screenshots */
+.screenshot  > a > img {
+    padding: 5px;
+    border: solid 1px #cccccc;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.screenshot  > a > img:hover {
+    border: solid 1px #005F86;
+}
 
 /* Blog styling - user dashboard and search box */
 #userDashBoard {

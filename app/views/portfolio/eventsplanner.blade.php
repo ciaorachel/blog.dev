@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-<title>Adlister</title>
+<title>Events Planner</title>
 @stop
 
 @section('content')
@@ -12,18 +12,20 @@
             <h1>Project: Events Planner</h1>
             <h3>Built with HTML, CSS, JavaScript, jQuery, PHP and Laravel</h3>
 
-            <a href="">
-	            <img src="/img/eventsplanner-preview-1.png" class="screenshot">
-            </a>
-            <a href="">
-	            <img src="/img/eventsplanner-preview-2.png" class="screenshot">
-	        </a>
-            <a href="">   
-	            <img src="/img/eventsplanner-preview-3.png" class="screenshot">
-	        </a>
-            <a href="">
-	            <img src="/img/eventsplanner-preview-4.png" class="screenshot">
-	        </a>
+            <div class="screenshot">
+	            <a href="">
+		            <img src="/img/eventsplanner-preview-1.png">
+	            </a>
+	            <a href="">
+		            <img src="/img/eventsplanner-preview-2.png">
+		        </a>
+	            <a href="">   
+		            <img src="/img/eventsplanner-preview-3.png">
+		        </a>
+	            <a href="">
+		            <img src="/img/eventsplanner-preview-4.png">
+		        </a>
+		    </div>
         </div>
         
 
