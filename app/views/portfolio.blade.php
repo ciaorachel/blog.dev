@@ -62,7 +62,7 @@
       <img src="/img/eventsplanner.png" alt="...">
       <div class="imgDescription">
         <p class="imgTitle">Project: Events Planner</p>
-        <p class="imgCaption">Built front-end with HTML, CSS, jQuery and JS plug-ins</p>
+        <p class="imgCaption">Built front-end with HTML, CSS, jQuery, JS plug-ins, Bootstrap theme and Laravel</p>
       </div>
     </div>
   </a>
@@ -74,7 +74,7 @@
       <img src="/img/wanna-play.png">
       <div class="imgDescription">
         <p class="imgTitle">Capstone: Wanna Play</p>
-        <p class="imgCaption">Built front-end with HTML, CSS, jQuery</p>
+        <p class="imgCaption">Built front-end with HTML, CSS, jQuery and Laravel</p>
       </div>
     </div>
   </a>
